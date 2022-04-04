@@ -4,9 +4,9 @@ images from the random forest predictor and overlays the
 two to allow them to be checked qualitativley for any 
 obvious errors.
 
-@author: Ross Carmichael
-@date: 12/10/21
+By Ross Carmichael
 """
+
 import numpy as np
 import cv2
 import pandas as pd

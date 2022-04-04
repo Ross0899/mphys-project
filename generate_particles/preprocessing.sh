@@ -51,7 +51,7 @@ if [ -d "./data/augmented/masks" ]; then
 
 # Run Python scripts
 echo "Generating..."
-python3 v1_generating_particles.py $1
+python3 generate_particles.py $1
 echo ""
 echo "Overlaying..."
 #python3 overlay_mask_image.py

@@ -1,3 +1,11 @@
+"""
+This script loads in a CNN model and uses it to predict the sizes of 
+a series of read in images. This was used to produce size distributions 
+for synthetic data, which we compared to the actual size distribution.
+
+@author: Ross Carmichael
+"""
+
 import os
 import sys 
 
@@ -9,6 +17,7 @@ import cv2
 from MightyMosaic import MightyMosaic
 from scipy import ndimage as ndi
 from datetime import datetime
+from size_distribution import plot
 
 import warnings
 warnings.filterwarnings('ignore')
@@ -33,15 +42,8 @@ dateTimeObj = datetime.now()
 timestampStr = dateTimeObj.strftime("%d-%b-%Y_%H.%M.%S")
 fname = "sizes_" + timestampStr + ".csv"
 
-# model_1.3
-path = "../preprocessing/Out"
-
-# # model_2.0
-# path = "../training_archive/training_v2/particles/"
-# # model_2.2
-# path = "../training_archive/training_v3/particles/"
-# # model_3.0
-#path = "../preprocessing/data/augmented/particles/"
+# Path to images
+path = ""
 
 # File paths
 images = load_data(path, tif=True)
@@ -53,7 +55,7 @@ print(f"Images: {len(images)}")
 
 synthetic_images = [read_image(image) for image in images]
 
-model = tf.keras.models.load_model('saved_model/model_1_TEST.h5')
+model = tf.keras.models.load_model('saved_model/model.h5')
 
 # add loop over all images
 
@@ -145,9 +147,5 @@ for synthetic_image in synthetic_images:
     areas = []
     areas_array = []
     
-
-sys.path.append("../preprocessing")
-from size_distribution import plot
-sys.path.append("../cnn")
-
+# Plot the sizes if required
 plot(fname, areas_file=True)

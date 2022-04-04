@@ -1,8 +1,11 @@
 """
-The script divides the images up into user-specified patches (e.g. 128x128).
+The script divides the images and masks up into user-specified patches (e.g. 128x128).
 The read in and save paths are defined below.
 
-@author: Sreenivas Bhattiprolu
+Script adapted from 
+    @author: Sreenivas Bhattiprolu
+
+By Ross Carmichael
 """
 
 from patchify import patchify, unpatchify

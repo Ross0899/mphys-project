@@ -8,7 +8,10 @@ but the code below works for the intended purpose and is fast enough
 Adaptation of original generate_particles.py script by Job Thijsen to make 
 images more representative of real TEM images.
 
-@author: Job Thjissen // Ross Carmichael
+Script adapted from     
+    @author: Job Thjissen
+
+By Ross Carmichael
 @date: 27/10/21
 """
 

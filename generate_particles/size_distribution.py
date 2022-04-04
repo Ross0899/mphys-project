@@ -1,6 +1,8 @@
 """
 Given a text file of particle radii in pixels, the area
 in pixels^2 is output.
+
+@author: Ross Carmichael
 """
 
 import matplotlib.pyplot as plt

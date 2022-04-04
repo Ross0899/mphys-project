@@ -1,0 +1,17 @@
+.ipynb_checkpoints
+
+*.h5
+
+saved_model/
+checkpoint/
+.DS_Store
+
+*.zip
+*.tif
+*.svg
+*.eps
+*.pdf
+*.txt
+*.png
+*.csv
+

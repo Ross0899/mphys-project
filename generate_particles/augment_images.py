@@ -1,6 +1,10 @@
-
 """
-@author: Sreenivas Bhattiprolu
+Perform augmentations on the training data to increase the size of the dataset.
+
+Script adapted from 
+    @author: Sreenivas Bhattiprolu
+
+By Ross Carmichael
 """
 
 import numpy as np

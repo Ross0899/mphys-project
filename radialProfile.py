@@ -1,3 +1,7 @@
+"""
+Helper function for power_spectrums.ipynb
+"""
+
 import numpy as np
 
 def azimuthalAverage(image, center=None):

@@ -1,3 +1,10 @@
+"""
+Plot the line profiles going from background to particle for a TEM and a synthetic training
+image. The CSV data files are obtained from the line profile tool in ImageJ.
+
+@author: Ross Carmichael
+"""
+
 import matplotlib.pyplot as plt 
 import numpy as np 
 from PIL import Image
